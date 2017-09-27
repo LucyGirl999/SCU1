@@ -1,0 +1,33 @@
+$(function(){
+	$("#rnow").css("color","#2057b2")
+  	$(".searchIframe").hide();
+	$(".searchContent").show();
+	$(".userSearch").click(function(){
+		$(".searchContent").show();
+		$(".searchIframe").hide();
+		$(".seniorSearch").css("background","#cfdcfd");
+		$(".userSearch").css("background","#fff");
+		
+	});
+	$(".seniorSearch").click(function() {
+		$(".searchIframe").show();
+		$(".searchContent").hide();
+		$(".seniorSearch").css("background","#fff");
+		$(".userSearch").css("background","#cfdcfd");
+	}); 
+	
+});
+
+function changeState(){
+		var x=document.getElementsByClassName("one");
+		if(document.getElementById("all").checked){
+			for(i=0;i<x.length;i++){
+				x[i].checked=true;
+			}
+		}
+		else{
+			for(i=0;i<x.length;i++){
+				x[i].checked=false;
+			}
+		}
+	}
